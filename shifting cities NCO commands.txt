@@ -1,0 +1,146 @@
+
+
+summers.now <- c(6, 7, 8, 18, 19, 20, 30, 31, 32, 42, 43, 44, 54, 55, 56, 66, 67, 68, 78, 79, 80, 90, 91, 92, 102, 103, 104, 114, 115, 116, 126, 127, 128, 138, 139, 140, 150, 151, 152, 162, 163, 164, 174, 175, 176, 186, 187, 188, 198, 199, 200, 210, 211, 212, 222, 223, 224, 234, 235, 236)
+
+summers.then <- c(6, 7, 8, 18, 19, 20, 30, 31, 32, 42, 43, 44, 54, 55, 56, 66, 67, 68, 78, 79, 80, 90, 91, 92, 102, 103, 104, 114, 115, 116, 126, 127, 128, 138, 139, 140, 150, 151, 152, 162, 163, 164, 174, 175, 176, 186, 187, 188, 198, 199, 200, 210, 211, 212, 222, 223, 224)
+
+
+
+ncks -F -d time,601,708 pdsisc.nc pdsisc.monthly.maps.1950-1959.nc
+ncwa -a time pdsisc.monthly.maps.1950-1959.nc pdsisc.monthly.maps.1950-1959.avg.nc
+
+
+# RCP 2.6
+
+cd /Volumes/CCDatStat/CMIP5/CMIP5_RCP26_allmonths_1986-2005/bcsd5/
+
+ncks -F -d time,5,234,12 Extraction_tasmax.nc Extraction_tas_junes1.nc
+ncwa -a projection,time Extraction_tas_junes1.nc Extraction_tas_junes_avg.nc
+ncks -F -d time,6,235,12 Extraction_tasmax.nc Extraction_tas_julys1.nc
+ncwa -a projection,time Extraction_tas_julys1.nc Extraction_tas_julys_avg.nc
+ncks -F -d time,7,236,12 Extraction_tasmax.nc Extraction_tas_augusts1.nc
+ncwa -a projection,time Extraction_tas_augusts1.nc Extraction_tas_augusts_avg.nc
+ncecat -v 'tasmax' Extraction_tas_*s_avg.nc Extraction_tas_SummerMonthAvgs.nc
+ncwa -a record Extraction_tas_SummerMonthAvgs.nc  Extraction_tas_SummerAvgs.nc
+
+cd /Volumes/CCDatStat/CMIP5/CMIP5_RCP26_allmonths_2081-2099/bcsd5/
+
+ncks -F -d time,5,222,12 Extraction_tasmax.nc Extraction_tas_junes1.nc
+ncwa -a projection,time Extraction_tas_junes1.nc Extraction_tas_junes_avg.nc
+ncks -F -d time,6,223,12 Extraction_tasmax.nc Extraction_tas_julys1.nc
+ncwa -a projection,time Extraction_tas_julys1.nc Extraction_tas_julys_avg.nc
+ncks -F -d time,7,224,12 Extraction_tasmax.nc Extraction_tas_augusts1.nc
+ncwa -a projection,time Extraction_tas_augusts1.nc Extraction_tas_augusts_avg.nc
+ncecat -v 'tasmax' Extraction_tas_*s_avg.nc Extraction_tas_SummerMonthAvgs.nc
+ncwa -a record Extraction_tas_SummerMonthAvgs.nc  Extraction_tas_SummerAvgs.nc
+
+
+# RCP 4.5
+
+cd /Volumes/CCDatStat/CMIP5/CMIP5_RCP45_allmonths_1986-2005/bcsd5/
+
+ncks -F -d time,5,234,12 Extraction_tasmax.nc Extraction_tas_junes1.nc
+ncwa -a projection,time Extraction_tas_junes1.nc Extraction_tas_junes_avg.nc
+ncks -F -d time,6,235,12 Extraction_tasmax.nc Extraction_tas_julys1.nc
+ncwa -a projection,time Extraction_tas_julys1.nc Extraction_tas_julys_avg.nc
+ncks -F -d time,7,236,12 Extraction_tasmax.nc Extraction_tas_augusts1.nc
+ncwa -a projection,time Extraction_tas_augusts1.nc Extraction_tas_augusts_avg.nc
+ncecat -v 'tasmax' Extraction_tas_*s_avg.nc Extraction_tas_SummerMonthAvgs.nc
+ncwa -a record Extraction_tas_SummerMonthAvgs.nc  Extraction_tas_SummerAvgs.nc
+
+
+cd /Volumes/CCDatStat/CMIP5/CMIP5_RCP45_allmonths_2081-2099/bcsd5/
+
+ncks -F -d time,5,222,12 Extraction_tasmax.nc Extraction_tas_junes1.nc
+ncwa -a projection,time Extraction_tas_junes1.nc Extraction_tas_junes_avg.nc
+ncks -F -d time,6,223,12 Extraction_tasmax.nc Extraction_tas_julys1.nc
+ncwa -a projection,time Extraction_tas_julys1.nc Extraction_tas_julys_avg.nc
+ncks -F -d time,7,224,12 Extraction_tasmax.nc Extraction_tas_augusts1.nc
+ncwa -a projection,time Extraction_tas_augusts1.nc Extraction_tas_augusts_avg.nc
+ncecat -v 'tasmax' Extraction_tas_*s_avg.nc Extraction_tas_SummerMonthAvgs.nc
+ncwa -a record Extraction_tas_SummerMonthAvgs.nc  Extraction_tas_SummerAvgs.nc
+
+
+
+# RCP 6.0
+
+cd /Volumes/CCDatStat/CMIP5/CMIP5_RCP60_allmonths_1986-2005/bcsd5/
+
+ncks -F -d time,5,234,12 Extraction_tasmax.nc Extraction_tas_junes1.nc
+ncwa -a projection,time Extraction_tas_junes1.nc Extraction_tas_junes_avg.nc
+ncks -F -d time,6,235,12 Extraction_tasmax.nc Extraction_tas_julys1.nc
+ncwa -a projection,time Extraction_tas_julys1.nc Extraction_tas_julys_avg.nc
+ncks -F -d time,7,236,12 Extraction_tasmax.nc Extraction_tas_augusts1.nc
+ncwa -a projection,time Extraction_tas_augusts1.nc Extraction_tas_augusts_avg.nc
+ncecat -v 'tasmax' Extraction_tas_*s_avg.nc Extraction_tas_SummerMonthAvgs.nc
+ncwa -a record Extraction_tas_SummerMonthAvgs.nc  Extraction_tas_SummerAvgs.nc
+
+
+cd /Volumes/CCDatStat/CMIP5/CMIP5_RCP60_allmonths_2081-2099/bcsd5/
+
+ncks -F -d time,5,222,12 Extraction_tasmax.nc Extraction_tas_junes1.nc
+ncwa -a projection,time Extraction_tas_junes1.nc Extraction_tas_junes_avg.nc
+ncks -F -d time,6,223,12 Extraction_tasmax.nc Extraction_tas_julys1.nc
+ncwa -a projection,time Extraction_tas_julys1.nc Extraction_tas_julys_avg.nc
+ncks -F -d time,7,224,12 Extraction_tasmax.nc Extraction_tas_augusts1.nc
+ncwa -a projection,time Extraction_tas_augusts1.nc Extraction_tas_augusts_avg.nc
+ncecat -v 'tasmax' Extraction_tas_*s_avg.nc Extraction_tas_SummerMonthAvgs.nc
+ncwa -a record Extraction_tas_SummerMonthAvgs.nc  Extraction_tas_SummerAvgs.nc
+
+
+# RCP 8.5
+
+cd /Volumes/CCDatStat/CMIP5/CMIP5_RCP85_allmonths_1986-2005/bcsd5/
+
+ncks -F -d time,5,234,12 Extraction_tasmax.nc Extraction_tas_junes1.nc
+ncwa -a projection,time Extraction_tas_junes1.nc Extraction_tas_junes_avg.nc
+ncks -F -d time,6,235,12 Extraction_tasmax.nc Extraction_tas_julys1.nc
+ncwa -a projection,time Extraction_tas_julys1.nc Extraction_tas_julys_avg.nc
+ncks -F -d time,7,236,12 Extraction_tasmax.nc Extraction_tas_augusts1.nc
+ncwa -a projection,time Extraction_tas_augusts1.nc Extraction_tas_augusts_avg.nc
+ncecat -v 'tasmax' Extraction_tas_*s_avg.nc Extraction_tas_SummerMonthAvgs.nc
+ncwa -a record Extraction_tas_SummerMonthAvgs.nc  Extraction_tas_SummerAvgs.nc
+
+
+cd /Volumes/CCDatStat/CMIP5/CMIP5_RCP85_allmonths_2081-2099/bcsd5/
+
+ncks -F -d time,5,222,12 Extraction_tasmax.nc Extraction_tas_junes1.nc
+ncwa -a projection,time Extraction_tas_junes1.nc Extraction_tas_junes_avg.nc
+ncks -F -d time,6,223,12 Extraction_tasmax.nc Extraction_tas_julys1.nc
+ncwa -a projection,time Extraction_tas_julys1.nc Extraction_tas_julys_avg.nc
+ncks -F -d time,7,224,12 Extraction_tasmax.nc Extraction_tas_augusts1.nc
+ncwa -a projection,time Extraction_tas_augusts1.nc Extraction_tas_augusts_avg.nc
+ncecat -v 'tasmax' Extraction_tas_*s_avg.nc Extraction_tas_SummerMonthAvgs.nc
+ncwa -a record Extraction_tas_SummerMonthAvgs.nc  Extraction_tas_SummerAvgs.nc
+
+
+# cd /Volumes/CCDatStat/CMIP5/CMIP5_RCP85_allmonths_1986-2005_TAS/bcsd5/
+#
+# ncks -F -d time,5,234,12 Extraction_tas.nc Extraction_tas_junes1.nc
+# ncwa -a projection,time Extraction_tas_junes1.nc Extraction_tas_junes_avg.nc
+# ncks -F -d time,6,235,12 Extraction_tas.nc Extraction_tas_julys1.nc
+# ncwa -a projection,time Extraction_tas_julys1.nc Extraction_tas_julys_avg.nc
+# ncks -F -d time,7,236,12 Extraction_tas.nc Extraction_tas_augusts1.nc
+# ncwa -a projection,time Extraction_tas_augusts1.nc Extraction_tas_augusts_avg.nc
+# ncecat -v 'tas' Extraction_tas_*s_avg.nc Extraction_tas_SummerMonthAvgs.nc
+# ncwa -a record Extraction_tas_SummerMonthAvgs.nc  Extraction_tas_SummerAvgs.nc
+#
+#
+# cd /Volumes/CCDatStat/CMIP5/CMIP5_RCP85_allmonths_2081-2099_TAS/bcsd5/
+#
+# ncks -F -d time,5,222,12 Extraction_tas.nc Extraction_tas_junes1.nc
+# ncwa -a projection,time Extraction_tas_junes1.nc Extraction_tas_junes_avg.nc
+# ncks -F -d time,6,223,12 Extraction_tas.nc Extraction_tas_julys1.nc
+# ncwa -a projection,time Extraction_tas_julys1.nc Extraction_tas_julys_avg.nc
+# ncks -F -d time,7,224,12 Extraction_tas.nc Extraction_tas_augusts1.nc
+# ncwa -a projection,time Extraction_tas_augusts1.nc Extraction_tas_augusts_avg.nc
+# ncecat -v 'tas' Extraction_tas_*s_avg.nc Extraction_tas_SummerMonthAvgs.nc
+# ncwa -a record Extraction_tas_SummerMonthAvgs.nc  Extraction_tas_SummerAvgs.nc
+
+
+
+
+
+
+cd /Volumes/CCDatStat/CMIP5/
+ncdiff /Volumes/CCDatStat/CMIP5/CMIP5_RCP85_allmonths_2081-2099/bcsd5/Extraction_tas_SummerAvgs.nc /Volumes/CCDatStat/CMIP5/CMIP5_RCP85_allmonths_1986-2005/bcsd5/Extraction_tas_SummerAvgs.nc  CMIP5_RCP85_tas_SummerAvgs_diff.nc
