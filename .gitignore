@@ -20,5 +20,7 @@ vignettes/*.pdf
 *.Rdata
 *.csv
 *.xlsx
+*.nc
+
 
 .DS_Store
